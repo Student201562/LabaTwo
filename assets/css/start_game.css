@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+/*index.php*/
+.class_body{
+  background-color: #5E2750;
+  background-size: 100%;  
+  padding: 0px;
+  margin: 0px;
+}
+
+.class_logotype{
+  border: 10px double #5E2750;
+  text-align: center;
+  float: left;
+}
+.class_header_index{
+  width: 100%;
+  background: #1a0000;
+}
+
+.class_main_menu{
+  list-style: none;
+  margin: 0px;
+  padding: 15px 0 25px;
+  text-align: center;
+  background: #1a0000;
+}
+.class_main_menu li {display: inline-block;}
+.class_main_menu li:after { /* после каждого элемента li вставит черту*/
+  content: "|";
+  color: #606060;
+}
+.class_main_menu li:last-child:after {content: none;} /* у последнего элемента убирает / */
+.class_main_menu a {
+  text-decoration: none;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  letter-spacing: 5px; /* расстояние между букв */
+  margin: 0 60px 0 60px;
+  font-size: 20px;
+  text-transform: uppercase;
+  transition: color .2s;
+}
+.class_main_menu a.current, .class_main_menu a:hover{color: #feb386;}
+
+.class_a_link{
+  pointer-events: none; 
+    cursor: default;  
+    color: #feb386;
+}
+
+.class_for_button{
+  display: flex;
+  /*определяет то, как будут выровнены элементы вдоль поперечной оси.*/
+    align-items: center; 
+    /*определяет то, как будут выровнены элементы вдоль главной оси*/
+    justify-content: center; 
+    height: 100%;
+}
+.class_button_play{
+  background: #1a0000;
+  margin-top: 20%;
+  width: 200px;
+  height: 40px;
+  font-size: 18pt;
+  color: #4B0082;
+  border-radius: 50px 50px 0px 0px;
+}
+
+/*aboutgame.php*/
+.class_header_about_game{
+  width: 100%;
+  position: fixed;
+ 
+}
+.class_description_game{
+  text-align: center;
+  margin: 0 200px 0 200px;
+}
+b{
+  color: black;
+  font-weight: bolder;
+}
+.class_caption_description{
+  font-family: serif;
+  color: white;
+  font-size: 24pt;
+  display: block;
+    padding-top: 30px;
+}
+.class_decor_test{
+  color: white;
+  font-size: 20pt;
+}
+/*toplistofgame.php*/
+.class_header_top_list_of_game{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  height: 80px;
+}
+.class_block_table_rating{
+  width: 95%;
+  max-width: 1000px;
+  margin: 20% 0px 0 20%; /* изменить*/
+  background:#696969;
+  transform: translateY(-200%);
+}
+
+.class_table_with_the_best_players{
+  width: 100%;
+  border-collapse: collapse;
+  color: white;
+  text-align: center;
+}
+
+.class_table_with_the_best_players td,
+.class_table_with_the_best_players th{
+  padding: 5px;
+}
+
+.class_table_with_the_best_players td{
+  position: relative;
+}
+
+@media screen and (max-width: 1050px){
+  thead{
+    display: none;
+  }
+  .class_block_table_rating{
+    transform: translateY(-100%); 
+  }
+  .class_table_with_the_best_players td:before{
+    content: attr(data-label);
+    position: absolute;
+    left: 2%;
+  }
+  .class_table_with_the_best_players td{
+    display: block;
+    padding-left: 10%;
+
+  }
+  .class_table_with_the_best_players td:nth-child(odd){
+    background: #ccc;
+  }
+}
+
+@media screen and (max-width: 600px){
+.class_table_with_the_best_players td:before{
+    position: static;
+    display: block;
+    background: #ccc;
+    font-weight: bold;
+    padding: 10px;
+  }
+.class_table_with_the_best_players td{
+    padding: 10px;
+    text-align: center;
+  }
+  .class_table_with_the_best_players td:nth-child(odd){
+    background-color: #fff;
+  }
+}
