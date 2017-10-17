@@ -2,26 +2,26 @@
 class Menu{
     // объявление листа
     public static $items = array (
-        1 => '<html><ul class="class_main_menu">
-            <li><a href="start.php?page=1" class="class_a_link">Home</a></li>
-			<li><a href="aboutgame.php?page=2">About</a></li>
-			<li><a href="toplistofgame.php?page=3">Rating</a></li>
-		</ul></html>',
-        2 => '<html><ul class="class_main_menu">
-				<li><a href="start.php?page=1">Home</a></li>
-				<li><a href="aboutgame.php?page=2" class="class_a_link">About</a></li>
-				<li><a href="toplistofgame.php?page=3">Rating</a></li>
-			</ul></html>',
-        3 => '<html><ul class="class_main_menu">
-			<li><a href="start.php?page=1">Home</a></li>
-			<li><a href="aboutgame.php?page=2">About</a></li>
-			<li><a href="toplistofgame.php?page=3" class="class_a_link">Rating</a></li>
-		</ul></html>'
+        1 => 'HOME',
+        2 => 'ABOUT',
+        3 => 'RATING'
     );
 
     // Объявление метода
-    public static function generate_menu($item) {
-        echo Menu::$items[$item]; // Возможна ошибка
+    public static function generate_menu($item_number) {
+        $menu = '<ul class="class_main_menu">';
+
+        for($i = 1; $i < count(self::$items); $i++){
+            $store_item = self::$items[$i];
+            if($i == $$item_number){
+                $menu .= '<li><a href="index.php?page='.$i.'" class="class_a_link">'.$store_item.'</a></li>';
+            }
+            else{
+                $menu .= '<li><a href="index.php?page='.$i.'">'.$store_item.'</a></li>';
+            }
+        }
+        $menu .= '</ul>';
+        return $menu;
     }
 }
 /**

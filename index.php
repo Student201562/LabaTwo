@@ -11,25 +11,7 @@
 		<a href="start.php"><img src="images/heisenberg.png" width="35"
                                  height="35" alt="logotype" title="logotype"></a>
 		</div>
-        <?php
-        $page = $_GET['page'];
-        switch($_GET['page']) {
-            case empty('$page'):
-                Menu::generate_menu(1);;
-                break;
-            case 1:
-                Content::getPage($page);;
-                break;
-            case 2:
-                Content::getPage($page);;
-                break;
-            case 3:
-                Content::getPage($page);;
-                break;
-        }
-        ?>
-</div>
-</div>
+    </div>
 </body>
 </html>
 /**

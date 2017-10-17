@@ -65,7 +65,7 @@
   border-radius: 50px 50px 0px 0px;
 }
 
-/*aboutgame.php*/
+/*aboutgame.html*/
 .class_header_about_game{
   width: 100%;
   position: fixed;
@@ -90,7 +90,7 @@ b{
   color: white;
   font-size: 20pt;
 }
-/*toplistofgame.php*/
+/*toplistofgame.html*/
 .class_header_top_list_of_game{
   width: 100%;
   position: fixed;

@@ -1,13 +1,13 @@
 <?php
 class Content{
     public $pages = array(
-    1=>'start.php',
-    2=>'aboutgame.php',
-    3=>'toplistofgame.php'
+    1=>'assets/start.html',
+    2=>'assets/aboutgame.html',
+    3=>'assets/toplistofgame.html'
     );
 
     public static function getPage($page){
-        return Content::$pages[$page];
+        return (require(self::$pages[$page]));
     }
 }
 /**
