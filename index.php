@@ -1,17 +1,28 @@
+<?php
+    $page = $_GET['page'];
+    require('menu.php');
+    require('content.php');?>
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<title>Gylever</title>
-	<link rel="stylesheet" type="text/css" href="css/start_game.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/start_game.css">
 </head>
 <body class="class_body">
 	<div class="class_header_index">
 		<div class="class_logotype">
-		<a href="start.php"><img src="images/heisenberg.png" width="35"
+		<a href="assets/start.html"><img src="assets/images/heisenberg.png" width="35"
                                  height="35" alt="logotype" title="logotype"></a>
 		</div>
-    </div>
+        <?php
+            Menu::generate_menu($page);
+        ?>
+    </div>;
+        <?php
+            Content::get_page($page);
+        ?>
 </body>
 </html>
 /**

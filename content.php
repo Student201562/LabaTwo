@@ -6,8 +6,8 @@ class Content{
     3=>'assets/toplistofgame.html'
     );
 
-    public static function getPage($page){
-        return (require(self::$pages[$page]));
+    public static function get_page($page){
+        return (include(self::$pages[$page]));
     }
 }
 /**
