@@ -1,5 +1,5 @@
 <?php
-    $page = $_GET['page'];
+    $page = (isset($_GET['page'])) ? $_GET['page'] : 1;
     require('menu.php');
     require('content.php');?>
 
@@ -17,17 +17,11 @@
                                  height="35" alt="logotype" title="logotype"></a>
 		</div>
         <?php
-            Menu::generate_menu($page);
+        echo Menu::generate_menu($page);
         ?>
-    </div>;
+    </div>
         <?php
-            Content::get_page($page);
+            echo Content::get_page($page);
         ?>
 </body>
 </html>
-/**
- * Created by PhpStorm.
- * User: Kiril
- * Date: 17.10.2017
- * Time: 14:05
- */

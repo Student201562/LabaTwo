@@ -1,13 +1,21 @@
 <?php
 class Content{
-    public $pages = array(
+    public static $pages = array(
     1=>'assets/start.html',
     2=>'assets/aboutgame.html',
     3=>'assets/toplistofgame.html'
     );
 
     public static function get_page($page){
-        return (include(self::$pages[$page]));
+        if(!array_key_exists($page, self::$pages))
+        {
+            return file_get_contents(self::$pages[1]);
+        }
+        else
+        {
+            return file_get_contents(self::$pages[$page]);
+        }
+            // считывает файл и начинку отдает
     }
 }
 /**
