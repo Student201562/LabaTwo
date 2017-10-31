@@ -15,6 +15,8 @@
 .class_header_index{
   width: 100%;
   background: #1a0000;
+  width: 100%;
+  position: fixed;
 }
 
 .class_main_menu{
@@ -23,6 +25,7 @@
   padding: 15px 0 25px;
   text-align: center;
   background: #1a0000;
+
 }
 .class_main_menu li {display: inline-block;}
 .class_main_menu li:after { /* после каждого элемента li вставит черту*/
@@ -42,9 +45,9 @@
 .class_main_menu a.current, .class_main_menu a:hover{color: #feb386;}
 
 .class_a_link{
-  pointer-events: none; 
-    cursor: default;  
-    color: #feb386;
+  pointer-events: none;
+  cursor: default;
+  color: #feb386;
 }
 
 .class_for_button{
@@ -69,7 +72,6 @@
 .class_header_about_game{
   width: 100%;
   position: fixed;
- 
 }
 .class_description_game{
   text-align: center;
@@ -92,17 +94,15 @@ b{
 }
 /*toplistofgame.html*/
 .class_header_top_list_of_game{
-  width: 100%;
-  position: fixed;
-  top: 0;
-  height: 80px;
+  padding-top: 10%;
+  text-align: center;
 }
 .class_block_table_rating{
-  width: 95%;
-  max-width: 1000px;
-  margin: 20% 0px 0 20%; /* изменить*/
-  background:#696969;
-  transform: translateY(-200%);
+  background: #708090;
+  margin-left: 10%;
+  margin-right: 10%;
+  border: ridge;
+  /*transform: translateY(-200%);*/
 }
 
 .class_table_with_the_best_players{

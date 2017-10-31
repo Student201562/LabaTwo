@@ -13,7 +13,7 @@
 <body class="class_body">
 	<div class="class_header_index">
 		<div class="class_logotype">
-		<a href="assets/start.html"><img src="assets/images/heisenberg.png" width="35"
+		<a href="index.php?page='.1.'"><img src="assets/images/heisenberg.png" width="35"
                                  height="35" alt="logotype" title="logotype"></a>
 		</div>
         <?php
